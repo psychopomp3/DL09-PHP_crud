@@ -133,7 +133,7 @@ $a **= 6; // $a = $a ** 6; (5 puissance 6);
 echo $a; //=5.72
 echo '<br/><br/><br/>';
 
-// EXO: ----------------------------------------------------------------
+// EXOs: ----------------------------------------------------------------
 // Créer 2 variables prixHT et TVA
 // Afficher le calcul du prix TTC
 $prixHT = 34;
@@ -154,6 +154,8 @@ $birthyear = '1979';
 $age = date("Y") - $birthyear;
 echo $age;
 
+$i = 0;
+$i++; // incrémentation $i = $i + 1 ou $i += 1;
 
 
 ?>
