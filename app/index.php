@@ -110,6 +110,50 @@ echo '<br/><br/><br/>';
 
 // Opérateurs ---------------------------------------------------------
 
+$x = 4;
+$y = 2;
+$z = 5;
+
+/* + - * / ** % */
+
+// $calcul = $x + $y;
+// $calcul = $x - $y;
+// $calcul = $x * $y;
+// $calcul = $x / $y;
+// $calcul = $x ** $y;
+$calcul = $x % $z; //modulo=reste de la division
+echo $calcul;
+echo '<br/>';
+
+$a = 5;
+$b = 7;
+// $a += .72; // $a = $a + 0.72;
+$a **= 6; // $a = $a ** 6; (5 puissance 6);
+
+echo $a; //=5.72
+echo '<br/><br/><br/>';
+
+// EXO: ----------------------------------------------------------------
+// Créer 2 variables prixHT et TVA
+// Afficher le calcul du prix TTC
+$prixHT = 34;
+$TVA = 10;
+// méthode 1:
+// $prixTTC = $prixHT * (1 + $TVA/ 100);
+// echo "Le prix TTC est de $prixTTC €";
+//méthode 2:
+echo '<br/>';
+$prixHT += $prixHT * $TVA / 100;
+echo "Le prix TTC est de $prixHT €";
+echo '<br/><br/>';
+
+// Calculer l'âge d'une personne en fonction de son année de naissance
+// en utilisant la fonction 'date'
+
+$birthyear = '1979';
+$age = date("Y") - $birthyear;
+echo $age;
+
 
 
 ?>
