@@ -1,9 +1,9 @@
-
-<h1>titre H1 en html</h1>
+<h1>Exercices de Syntaxe de base en PHP</h1>
 
 <?php
 
-//variables
+// Variables -----------------------------------------------------
+
 $variable = 'une variable';
 $VariaBle = 'une autre variable';
 echo $variable;
@@ -59,6 +59,11 @@ echo '<br/>';
 echo "$data1, $data4. Je viens de la $data2 $data3.";
 echo '<br/>';
 
+$client = 'Jane Doe';
+$formation = 'Architecte';
+echo "$client suit une formation de $formation";
+echo '<br/>';
+
 $html = '';
 $html .= $data1;
 $html .= ', ';
@@ -73,16 +78,40 @@ echo $html;
 echo '<br/><br/><br/>';
 
 
-// tableau
+// Tableaux ----------------------------------------------------------
 
 $tableau = ['Groupe Scolaire',34,5.78,false,[1,2,3]];
-// echo $tableau; <--fausse syntaxe
+// echo $tableau; <-fausse syntaxe!
 echo "<pre>";
 // print_r($tableau); ou:
 var_dump($tableau);
 echo "</pre>";
-echo "</pre>";
-die();
+echo '<br/><br/><br/>';
+
+
+// Constantes --------------------------------------------------------
+
+define('USER', 'John Doe');
+echo USER;
+echo '<br/>';
+define('TABLEAU', ['client', 4, true, 4.8]);
+var_dump(TABLEAU);
+echo '<br/><br/><br/>';
+
+
+// Variables Super Globales -------------------------------------------
+
+// var_dump($GLOBALS);
+echo '<pre>';
+var_dump($_SERVER);
+echo '</pre>';
+echo '<br/><br/><br/>';
+
+
+// Opérateurs ---------------------------------------------------------
+
+
+
 ?>
 
 
