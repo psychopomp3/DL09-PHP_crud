@@ -5,9 +5,9 @@ echo '<br/><br/><br/>';
 // tableaux indéxés
 
 $tablo01 = [];
-// $tablo01 = array (); <- declaration dessuète
+// $tablo01 = array (); <- declaration obsolète
 
-// $tablo02 = [true, 4, 5.8, [5, 'client', ['user', 8.9, 8]]];  écrite espacée ci-dessous équivalente
+// $tablo02 = [true, 4, 5.8, [5, 'client', ['user', 8.9, 8]]];  écriture espacée ci-dessous équivalente
 $tablo02 = [
     true,
     4,
@@ -91,11 +91,63 @@ $fruits2 = explode('¤', $chaine);
 print_r($fruits2);
 echo '<br/><br/><br/>';
 
-$planets = ['mars', 'terre', 'uranus', 'venus', 'jupiter'];
+// $planets = ['mars', 'terre', 'uranus', 'venus', 'jupiter'];
+$planets = [
+    'm' => 'mars',
+    't' => 'terre',
+    'u' => 'uranus',
+    'v' => 'venus',
+    'j' => 'jupiter'
+];
 print_r($planets); echo '<br/>';
-sort($planets);
+sort($planets); // classement des valeurs
+print_r($planets); echo '<br/>';
+rsort($planets); // reverse sort, classement à l'envers
 print_r($planets); echo '<br/>';
 
+// asort, ksort, arsort, krsort ...à tester...
+echo '<br/><br/><br/>';
 
+
+$lettres = [];
+$lettres[] = ['A', 'B', 'C'];
+$lettres[] = ['Q', 'R', 'T'];
+$lettres[] = ['E', 'U', 'P', 'I'];
+print_r($lettres);
+echo '<br/>';
+//afficher le mot 'ceppic'
+print_r($lettres[0][2] . $lettres[2][0] . $lettres[2][2] . $lettres[2][2] . $lettres[2][3] . $lettres[0][2]);
+echo '<br/><br/><br/>';
+
+
+$person1 = [
+    'nom' => 'Carle',
+    'prenom' => 'Awa',
+    'email' => 'cawa@yahoo.com'
+];
+$people = [
+    $person1,
+    [
+        'nom' => 'Mourad',
+        'prenom' => 'Michel',
+        'email' => 'moumi@caramail.com'   
+    ],
+    [
+        'nom' => 'Dupond',
+        'prenom' => 'Lucie',
+        'email' => 'ludu@gmail.com'   
+    ]
+];
+print_r($people);
+
+/* Afficher les phrases :
+'Le nom de Lucie est Dupond'
+'L'email de Mourad est mouni @caramail.com' */
+
+print_r('Le nom de ' . $people[2]['prenom'] . ' est ' . $people[2]['nom'] . '.');
+echo '<br/>';
+print_r('L\'email de ' . $people[1]['nom'] . ' est ' . $people[1]['email'] . '.');
+echo '<br/>';
+ls -al
 
 ?>
