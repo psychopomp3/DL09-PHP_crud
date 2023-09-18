@@ -7,7 +7,7 @@ echo '<br/><br/><br/>';
 $tablo01 = [];
 // $tablo01 = array (); <- declaration obsolète
 
-// $tablo02 = [true, 4, 5.8, [5, 'client', ['user', 8.9, 8]]];  écriture espacée ci-dessous équivalente
+// $tablo02 = [true, 4, 5.8, [5, 'client', ['user', 8.9, 8]]];  = écriture espacée ci-dessous équivalente
 $tablo02 = [
     true,
     4,
@@ -146,8 +146,32 @@ print_r($people);
 
 print_r('Le nom de ' . $people[2]['prenom'] . ' est ' . $people[2]['nom'] . '.');
 echo '<br/>';
-print_r('L\'email de ' . $people[1]['nom'] . ' est ' . $people[1]['email'] . '.');
+print_r('L\'email de M. ' . $people[1]['nom'] . ' est ' . $people[1]['email'] . '.');
 echo '<br/>';
-ls -al
 
+$jsonfile = json_encode($people); // transforme un tableau en fichier json
+print_r($jsonfile);
+
+$jsonPerson = '{
+    "nom" : "Pont",
+    "prenom" : "Albert",
+    "email" : "ponal@yahoo.fr",
+    "couleur" : ["rouge", "vert", "jaune"],
+    "image" : "http://ximg.es/128x128/000/fff"
+}';
+
+$jsonPersonArray = json_decode($jsonPerson, true); // transforme un fichier json en tableau
+print_r($jsonPersonArray);
 ?>
+
+<figure>
+    <img src="<?=$jsonPersonArray['image']?>">
+    <figcaption>
+        <ul>
+            <li><?=$jsonPersonArray['prenom']?>
+            <?=$jsonPersonArray['nom']?>
+            </li>
+            <li><?=$jsonPersonArray['email']?></li>
+        </ul>
+    </figcaption>
+</figure>
