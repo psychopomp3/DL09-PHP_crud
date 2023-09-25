@@ -24,6 +24,7 @@ $tablo02 = [
 ];
 echo "<pre>";
 var_dump($tablo02);
+echo "</pre>";
 echo '<br/><br/><br/>';
 //--------------------------------------------------------------------------------
 
@@ -33,6 +34,7 @@ $tablo03 = 45;
 $tablo03 = false;
 echo "<pre>";
 var_dump($tablo03);
+echo "</pre>";
 echo '<br/>';
 // ceci ne définit qu'une seule cellule, qu'on réaffecte à chaque fois...
 
@@ -42,6 +44,7 @@ $tablo03[] = 45;
 $tablo03[] = false;
 echo "<pre>";
 var_dump($tablo03);
+echo "</pre>";
 echo '<br/>'; // ou bien ...
 
 // ...pour remplir les cellules les unes à la suite des autres :
@@ -56,6 +59,7 @@ $notes = [12, 14, 8, 10];
 $tabloFusion = array_merge($tablo04, $notes);
 echo "<pre>";
 var_dump($tabloFusion);
+echo "</pre>";
 echo '<br/>';
 
 // les index : accéder aux élements du tableau -----------------------------------
@@ -142,7 +146,7 @@ print_r($people);
 
 /* Afficher les phrases :
 'Le nom de Lucie est Dupond'
-'L'email de Mourad est mouni @caramail.com' */
+'L'email de Mourad est mouni@caramail.com' */
 
 print_r('Le nom de ' . $people[2]['prenom'] . ' est ' . $people[2]['nom'] . '.');
 echo '<br/>';

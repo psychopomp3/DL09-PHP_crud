@@ -115,11 +115,11 @@ switch ($couleur):
         echo "votre fav est le vair";
         break;
     default:
-            echo "votre fav n'est ni le rouj, ni le ble, ni le vair";
+            echo "votre fav n'est ni le rouj, ni le bloeux, ni le vair";
 endswitch;
 echo '<br/><br/><br/>';
 
-// match (équivaut à ===, quand switch est un comparaison d'identité de type ==)----
+// match (équivaut à ===, quand switch est une comparaison d'identité de type ==)----
 $returnvalue = match($couleur) {
     'red' => 'votre fav matche le rouge',
     'blue' => 'votre fav matche le bleu',
