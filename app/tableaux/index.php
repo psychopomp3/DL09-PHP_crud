@@ -172,9 +172,7 @@ print_r($jsonPersonArray);
     <img src="<?=$jsonPersonArray['image']?>">
     <figcaption>
         <ul>
-            <li><?=$jsonPersonArray['prenom']?>
-            <?=$jsonPersonArray['nom']?>
-            </li>
+            <li><?=$jsonPersonArray['prenom']?> <?=$jsonPersonArray['nom']?></li>
             <li><?=$jsonPersonArray['email']?></li>
         </ul>
     </figcaption>
