@@ -75,7 +75,7 @@ function Age($birthyear) {
     return date("Y") - $birthyear;
 }
 echo 'L\'âge est ' . Age(1776) . ' ans.';
-echo '<br/><br/><br/>';
+
 
 //------------------------------------------------------------------------------------
 
@@ -84,8 +84,11 @@ function monVide() : void
     return ;
 }
 
-// fonctions internes à PHP:
- 
+
+//----------------------------------------------------------------------------------
+// fonctions internes à PHP, traitement sur les chaines de caractères:
+echo '<br/><br/><br/>';
+echo '---fonctions internes à PHP---<br/><br/>';
 
 $article = "Je lis un article.";
 /* inverser une chaine de caractères:

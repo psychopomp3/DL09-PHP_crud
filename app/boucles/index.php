@@ -1,43 +1,61 @@
 <?php
 echo "index de 'boucles'";
+
+require '../fonctions/debug-dd.php';
+
+//--------------------------------------------------------------------------
+// boucle FOREACH ----------------------------------------------------------
 echo '<br/><br/><br/>';
 
-require '../fonctions/index.php';
-$planetes = ['mars', 'uranus', 'jupiter', 'terre', 'saturne'];
-// dbug($planetes);
-// echo '<br/>';
-// dd($planetes);
-// echo '<br/>';
 
+$planetes = ['mars', 'uranus', 'jupiter', 'terre', 'saturne'];
+dbug($planetes);
+/*echo '<br/>';
+dd($planetes);
+echo '<br/>';*/
+
+/* On utilise un boucle pour afficher les elements du tableau 
+avec une commande 'echo', au lieu d'un affichage par 'print_r' ou 'var_dump': */
+echo "On utilise un boucle pour afficher les elements du tableau 
+avec une commande 'echo', au lieu d'un affichage par 'print_r' ou 'var_dump':<br/><br/>";
 /*foreach($planetes as $planete) {
     echo "$planete<br/>";
 }*/
+echo '(affichage des valeurs:)<br/>';
 // syntaxe alternative :
 foreach($planetes as $planete):
     echo "$planete<br/>";
 endforeach;
 echo '<br/>';
-
+echo '(affichage des couples clé/valeurs:)<br/>';
 foreach($planetes as $key => $planete):
     // echo "$key : $planete<br>";
     // syntaxe alt.:
     echo $key . ' : ' . $planete . '<br/>';
 endforeach;
-echo '<br/><br/><br/>';
+
 
 //--------------------------------------------------------------------------
+echo '<br/><br/><br/>';
+echo '---Afficher les valeurs après un traitement sur celles-ci---<br/><br/>';
 
 $numbers = [2, 3, 4, 5];
 dbug($numbers);
-echo '<br/>';
 
-/* foreach($numbers as &$number):
+// afficher les valeurs, après un traitement sur celles-ci:
+/*foreach($numbers as &$number):
     $number = $number * 3;
-    // echo "$number<br/>";
-endforeach;
-echo '<br/>';
-dbug($numbers); */
+    echo "$number<br/>";
+endforeach;*/
+// dbug($numbers);
 
+// afficher les couples clé/valeurs, après un traitement sur celles-ci: version 1
+/*foreach($numbers as $key => &$number):
+    $number = $number * 3;
+    echo "$key : $number<br/>";
+endforeach;*/
+
+// afficher les couples clé/valeurs, après un traitement sur celles-ci: version 2
 $i = 0;
 foreach($numbers as &$number):
     $number = $number * 3;
@@ -82,10 +100,23 @@ foreach($user as $key => $value):
         echo "$key : $value<br/>";
     }
 endforeach;
-echo '<br/>';
+echo '<br/><br/>';
 
-/* version Mehdi: 
+// ma version #3: 
 foreach($user as $key => $value):  
+    if(is_array($value)) {
+        echo "skills : ";
+        foreach($value as $skill):
+            echo "$skill<br/>";
+        endforeach;
+    } else {
+        echo "$key : $value<br/>";
+    }
+endforeach;
+echo '<br/><br/>';
+
+// version Mehdi: 
+/* foreach($user as $key => $value):  
     echo "$key : ";
     if(is_array($value)) {
         foreach($value as $skill):

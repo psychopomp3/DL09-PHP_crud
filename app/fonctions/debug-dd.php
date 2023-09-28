@@ -13,7 +13,8 @@ function dbug($value) {
 
 function dd($value) {
     dbug($value);
-    die("--la fonction 'die' arrête le script--");
+    // die("--la fonction 'die' arrête le script--");
+    die("");
 }
 
 ?>

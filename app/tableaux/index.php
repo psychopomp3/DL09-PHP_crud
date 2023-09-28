@@ -1,9 +1,10 @@
 <?php
 echo "index de 'tableaux'";
+
+
+// tableaux indéxés---------------------------------------------------------------
 echo '<br/><br/><br/>';
-
-// tableaux indéxés
-
+echo "---tableaux indéxés, et les manières de les remplir---<br/>";
 $tablo01 = [];
 // $tablo01 = array (); <- declaration obsolète
 
@@ -25,8 +26,8 @@ $tablo02 = [
 echo "<pre>";
 var_dump($tablo02);
 echo "</pre>";
-echo '<br/><br/><br/>';
-//--------------------------------------------------------------------------------
+echo '<br/><br/>';
+//----------------------------------
 
 $tablo03 = [];
 $tablo03 = 'janvier';
@@ -60,19 +61,23 @@ $tabloFusion = array_merge($tablo04, $notes);
 echo "<pre>";
 var_dump($tabloFusion);
 echo "</pre>";
-echo '<br/>';
 
-// les index : accéder aux élements du tableau -----------------------------------
 
+// les index : accéder aux élements du tableau -------------------------------------
+echo '<br/><br/>';
+echo "---les index : accéder aux élements du tableau---<br/><br/>";
 var_dump($notes[1]); // afficher la 2ème cellule du tableau 'notes'
 var_dump($tabloFusion[4]);
 print_r($tabloFusion[4]); echo '<br/>';
 print_r($tabloFusion[0]); echo '<br/>';
 print_r($tablo02[3][1]); echo '<br/>'; //afficher 'client' du tableau 2
 print_r($tablo02[3][2][2]); //afficher '8' du tableau 2
-echo '<br/><br/><br/>';
 
-// tableau associatif ------------------------------------------------------------
+
+
+// tableaux associatifs ------------------------------------------------------------
+echo '<br/><br/><br/><br/>';
+echo "---tableaux associatifs---<br/><br/>";
 $fruits = [
     'banane' => 'jaune',
     'pomme' => 'rouge',
@@ -85,16 +90,23 @@ print_r($fruits);
 echo '<br/>';
 
 print_r($fruits['kiwi']); // afficher la couleur du kiwi (notion de 'clé' et 'valeur')
-echo '<br/>';
 
-$chaine = implode('¤', $fruits); //afficher les VALEURS de chaque cellule dans une seule chaine de charactère avec le séparateur choisit '¤'
+
+echo '<br/><br/>';
+echo "---Implode : affiche les VALEURS de chaque cellule dans une seule chaine de charactère avec le séparateur choisi---<br/>";
+$chaine = implode(' ¤ ', $fruits); //afficher les VALEURS de chaque cellule dans une seule chaine de charactère avec le séparateur choisi '¤'
 print_r($chaine);
-echo '<br/>';
+echo '<br/><br/>';
 // à l'inverse 'explode' prend les mots d'une chaine de charactère et les places en valeurs d'un nouveau tableau
-$fruits2 = explode('¤', $chaine);
+echo "---Explode : prend les segments (entre un séparateur choisi) d'une chaine de charactère et les places en valeurs d'un nouveau tableau---<br/>";
+$fruits2 = explode(' ¤ ', $chaine);
 print_r($fruits2);
-echo '<br/><br/><br/>';
 
+//-------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------
+
+echo '<br/><br/><br/><br/>';
+echo "---Classement, tri, etc... dans un tableau associatif---<br/><br/>";
 // $planets = ['mars', 'terre', 'uranus', 'venus', 'jupiter'];
 $planets = [
     'm' => 'mars',
@@ -121,9 +133,13 @@ print_r($lettres);
 echo '<br/>';
 //afficher le mot 'ceppic'
 print_r($lettres[0][2] . $lettres[2][0] . $lettres[2][2] . $lettres[2][2] . $lettres[2][3] . $lettres[0][2]);
-echo '<br/><br/><br/>';
 
 
+//-------------------------------------------------------------------------------
+
+
+echo '<br/><br/><br/><br/>';
+echo "---les index ET clés: accéder aux élements du tableau---<br/><br/>";
 $person1 = [
     'nom' => 'Carle',
     'prenom' => 'Awa',
@@ -153,9 +169,18 @@ echo '<br/>';
 print_r('L\'email de M. ' . $people[1]['nom'] . ' est ' . $people[1]['email'] . '.');
 echo '<br/>';
 
+
+//-------------------------------------------------------------------------------
+// Fichiers JSON-----------------------------------------------------------------
+
+echo '<br/><br/><br/><br/>';
+echo "---fichiers JSON---<br/><br/>";
+
 $jsonfile = json_encode($people); // transforme un tableau en fichier json
 print_r($jsonfile);
+echo '<br/><br/>';
 
+// syntaxe de création d'un fichier json:
 $jsonPerson = '{
     "nom" : "Pont",
     "prenom" : "Albert",
@@ -169,7 +194,7 @@ print_r($jsonPersonArray);
 ?>
 
 <figure>
-    <img src="<?=$jsonPersonArray['image']?>">
+    <img src="<?=$jsonPersonArray['image']?>" alt="">
     <figcaption>
         <ul>
             <li><?=$jsonPersonArray['prenom']?> <?=$jsonPersonArray['nom']?></li>

@@ -3,14 +3,14 @@ echo "test du index de 'struc-control'";
 echo '<br/><br/><br/>';
 
 /*--conditions : if, else, elseif ------------------------------------------------*/
-
+echo "---boucles 'IF'---<br/><br/>";
 $age = 10;
 if($age >= 18) {
     echo "Vous avez le droit de voter";
     echo '<br/>';
 } else {
     echo "Vous n'avez pas le droit de voter";
-    echo '<br/><br/><br/>';
+    echo '<br/><br/>';
 }
 
 // $heure = 23;
@@ -29,6 +29,8 @@ if($heure < 12) {
 }
 echo '<br/><br/><br/>';
 
+/*--Comparateurs ------------------------------------------------*/
+echo "---Comparateurs---<br/><br/>";
 /* != : est différent de */
 /* == : comparaison d'égalité en valeur */
 /* === : comparaison d'égalité en TYPE de variable ET valeur */ 
@@ -46,31 +48,35 @@ if($b === '5') {
 } else {
     echo "mauvais type de variable";
 }
-echo '<br/><br/><br/>';
 
 // if a une syntaxe simplifiée pour les conditions booléenes (true, false, null):
+echo '<br/><br/><br/>';
+echo "---boucles 'IF' syntaxe simplifiée pour booléens---<br/><br/>";
 $vrai = true;
 if($vrai) {
     echo "affichons 'vrai'";
 } else {
     echo "affichons 'faux'";
 }
-echo '<br/><br/><br/>';
+
 
 // condition ternaire --------------------------------------------------------
+echo '<br/><br/><br/>';
+echo "---Conditions ternaires---<br/><br/>";
 $votes = 7540;
 $votesPrecedents = 1254;
 // si $votes est sup à $votesPrecedents, décrémente $votes, sinon incrémente $votes :
 ($votes > $votesPrecedents) ? $votes-- : $votes++;
 echo $votes;
+echo '<br/>';
 
-/* pour l'exo précédent (cas des booléens) on peut même faire : 
+// pour l'exo précédent (cas des booléens) on peut même faire : 
 echo ($vrai) ? "affichons 'vrai'" : "affichons 'faux'";
-car il ne s'agit que d'affichage, il n'y a pas de traitement des variables, de type incrémentation
-*/
-echo '<br/><br/><br/>';
+// car il ne s'agit que d'affichage, il n'y a pas de traitement des variables, de type incrémentation
+echo '<br/><br/>';
 
-// syntaxe alternative :
+// syntaxe alternative pour booléens et ternaires :
+echo "---syntaxe alternative pour booléens et ternaires---<br/>";
 $vrai = false;
 if($vrai) :
     echo "vré";
@@ -85,9 +91,11 @@ else :
     $votes++;
 endif;
 echo $votes;
-echo '<br/><br/><br/>';
 
-// switch (vérifier une chaine de charactère)--------------------------------------
+
+// switch (vérifier la reconnaissance d'une chaine de charactère)--------------------------------------
+echo '<br/><br/><br/>';
+echo "---''Switch' : (vérifier la reconnaissance d'une chaine de charactère)---<br/><br/>";
 $couleur ='purple';
 switch ($couleur) {
     case 'red':
