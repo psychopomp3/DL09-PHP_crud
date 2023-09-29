@@ -53,26 +53,26 @@ dbug($_POST);
 
 
 <?php
-echo "<hr/>";
+    echo "<hr/>";
 
-echo 'Votre email est : ' . $_POST['email'];
+    echo 'Votre email est : ' . $_POST['email'];
 
-echo "<hr/>";
+    echo "<hr/>";
 
-// boucler sur le tableau $_POST en affichant tous les champs du formulaire dans une liste ul
+    // boucler sur le tableau $_POST en affichant tous les champs du formulaire dans une liste ul
 
-echo "<ul>";
-foreach($_POST as $key => &$val):
-    if(is_array($val)) {
-        $chaine = implode(', ', $_POST['competence']);
-        echo "<li>$key : $chaine</li>";
-        } else {
-        echo "<li>$key : $val</li>";
-    }
-endforeach;
-echo "</ul>";
+    echo "<ul>";
+    foreach($_POST as $key => &$val):
+        if(is_array($val)) {
+            $chaine = implode(', ', $_POST['competence']);
+            echo "<li>$key : $chaine</li>";
+            } else {
+            echo "<li>$key : $val</li>";
+        }
+    endforeach;
+    echo "</ul>";
 
-echo "<hr/>";
+    echo "<hr/>";
 ?>
 <ul>
 <?php foreach($_POST as $key => $val):

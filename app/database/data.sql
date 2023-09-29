@@ -11,5 +11,6 @@ CREATE TABLE IF NOT EXISTS post (
 
 INSERT INTO post (nom, email, titre, commentaire, competence, niveau)
 VALUES
-('jon doe', 'jjo@yahoo.uk', 'un titre pour jojj', 'There are a number of mailing lists devoted to', 'python, html', 'expert'),
-('jane doe', 'jaja@yahoo.uk', 'titre de jane', 'There are a number of mailing lists devoted to', 'php, html', 'intermediaire');
+('John Doe', 'jojo@yahoo.uk', 'un titre pour jojj', 'There are a number of mailing lists devoted to', 'python, html', 'expert'),
+('Jane Doe', 'jaja@yahoo.uk', 'titre de jane', 'Un texte trop trop bien wesh', 'php, html', 'intermediaire'),
+('Valerie-Dami Doe', 'vd.doe@yahoo.uk', 'titre de Valoche', 'Un tiens vaut mieux la peau de lours', 'php, html', 'intermediaire');
