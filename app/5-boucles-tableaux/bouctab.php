@@ -1,5 +1,5 @@
 <?php require '../3-fonctions/debug-dd.php';?>
-<?php require '../data/villes.php';?>
+<?php require '../somedata/villes.php';?>
 <?php echo "index de 'Boucles-Tableaux'";
 echo '<br/><br/><br/>';?>
 
@@ -14,7 +14,7 @@ echo '<br/><br/><br/>';?>
     
     <?php
 
-        $jsonListEmployees = file_get_contents('../data/employees.json');
+        $jsonListEmployees = file_get_contents('../somedata/employees.json');
         // dd($jsonListEmployees);
         $jsonListEmployeesArray = json_decode($jsonListEmployees, true);
         // dd($jsonListEmployeesArray);
