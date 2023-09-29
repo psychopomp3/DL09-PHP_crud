@@ -1,7 +1,7 @@
 <?php
 echo "index de 'boucles'";
 
-require '../fonctions/debug-dd.php';
+require '../3-fonctions/debug-dd.php';
 
 //--------------------------------------------------------------------------
 // boucle FOREACH ----------------------------------------------------------
