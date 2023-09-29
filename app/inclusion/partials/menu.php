@@ -5,4 +5,5 @@
     <li><a href="../../3-fonctions/fonc.php">Fonctions</a></li>
     <li><a href="../../4-boucles/bouc.php">Boucles</a></li>
     <li><a href="../../5-boucles-tableaux/bouctab.php">Boucles-Tableaux</a></li>
+    <li><a href="../../6-formulaires/form.php">Tableaux</a></li>
 </ul>
