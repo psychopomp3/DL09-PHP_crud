@@ -17,10 +17,16 @@ class Database {
         }
 
     }
-
-    public function query($query) {
+//v1
+    /* public function query($query) {
         $statement = $this->connexion->prepare($query);
         $statement->execute();
+        return $statement;
+    } */
+//v2
+    public function query($query, $param =[]) {
+        $statement = $this->connexion->prepare($query);
+        $statement->execute($param);
         return $statement;
     }
 
