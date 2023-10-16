@@ -1,4 +1,4 @@
-<?php require '../3-fonctions/debug-dd.php';?>
+<?php require '../4-fonctions/debug-dd.php';?>
 <?php require '../somedata/villes.php';?>
 <?php echo "index de 'Boucles-Tableaux'";
 echo '<br/><br/><br/>';?>
