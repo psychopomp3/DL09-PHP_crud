@@ -8,7 +8,7 @@
 <body>
     <h1>Site de Recettes de Cuisine</h1>
 
-    <?php include 'partials/header.php'; ?>
+    <?php include 'partials/header.php'; ?><br/>
 
     <main>
         <h2><?=$heading;?></h2>

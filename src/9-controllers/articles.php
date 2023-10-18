@@ -11,12 +11,12 @@
 <!-- Rajout du DL08 PHPmyAdmin-------------------------------------- -->
 <?php
 
-include './4-fonctions/debug-dd.php';
+// include './4-fonctions/debug-dd.php';
 require './Database.php';
 
 $db = new Database();
 // $articles = $db->query('SELECT * FROM post')->fetchAll(PDO::FETCH_ASSOC);
-$articles = $db->query('SELECT * FROM post')->fetchAll();
+$articles = $db->query('SELECT * FROM post')->findAll();
 
 
 /*

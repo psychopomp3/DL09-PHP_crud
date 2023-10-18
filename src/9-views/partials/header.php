@@ -20,7 +20,9 @@
         }
     </style>
 </head>
+
 <body>
-    <?php include 'nav.php'; ?>
-</body>
-</html>
+
+    <header>
+        <?php include 'nav.php'; ?>
+    </header>
