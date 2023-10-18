@@ -8,7 +8,7 @@ class Database {
 
     public function __construct() {
         try {
-            $this->connexion = new PDO('mysql:host=mariadb;dbname=bloog', 
+            $this->connexion = new PDO('mysql:host=mariadb;dbname=blog', 
                                         'root', 'root', 
             [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC]);
             // echo "connexion OK";

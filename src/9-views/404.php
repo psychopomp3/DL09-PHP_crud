@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <h3><?=$article['titre']?></h3>
-    <p><?=$article['contenu']?></p>
-    <p>crée le: <?=$article['create_at']?></p>
 
+    <h1>404!</h1>
+    
 </body>
-</html>
 </html>
