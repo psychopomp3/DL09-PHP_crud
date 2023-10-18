@@ -6,11 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <h3><?=$article['titre']?></h3>
-    <p><?=$article['contenu']?></p>
-    <p>crée le: <?=$article['create_at']?></p>
+
+<nav>
+    <ul>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/articles">Articles</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+</nav>
 
 </body>
-</html>
 </html>

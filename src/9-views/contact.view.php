@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Contact</title>
 </head>
 <body>
-    <h1>Site de Recettes de Cuisine</h1>    
+    <h1>Site de Recettes de Cuisine</h1>
 
-    <?php include 'partials/header.php'; ?><br/>
-    
+    <?php include 'partials/header.php'; ?>
+
     <main>
         <h2><?=$heading;?></h2>
     </main>

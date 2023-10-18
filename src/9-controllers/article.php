@@ -1,6 +1,6 @@
 <?php
-include './4-fonctions/debug-dd.php';
-require './Database.php';
+include '../4-fonctions/debug-dd.php';
+require '../Database.php';
 
 // dd($_GET);
 
@@ -13,8 +13,13 @@ $article = $db->query($queryArticle)->fetch(); */
 //v2
 $queryArticle = 'SELECT * FROM post WHERE id = :id';
 $article = $db->query($queryArticle, [':id' => $id])->fetch();
+
 // dd($article);
 
-include './9-views/show.view.php';
+if (! $article){
+    exit("article n'existe pas!");
+}
+
+include '../9-views/article.view.php';
 
 ?>
