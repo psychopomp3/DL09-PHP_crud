@@ -1,6 +1,6 @@
 header, header ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -10,4 +10,13 @@ header ul {
 
 ul {
     list-style-type: none;
+}
+
+h1{
+    text-align: center;
+    font-weight: bold;
+}
+
+nav li{
+    justify-content: space-evenly;
 }
