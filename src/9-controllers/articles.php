@@ -8,10 +8,15 @@ $db = new Database();
 $articles = $db->query('SELECT * FROM post')->findAll();
 
 
-
 $heading = 'Liste de recettes:';
+view('articles',
+    [
+    'heading' => $heading,
+    'articles' => $articles
+    ]
+    );
 
-include './9-views/articles.view.php';
+// include './9-views/articles.view.php';
 
 
 ?>

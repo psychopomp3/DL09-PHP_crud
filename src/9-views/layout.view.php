@@ -1,3 +1,4 @@
+    <?php include 'partials/header.php'; ?>
 
     <h1>Site de Recettes de Cuisine</h1>
 

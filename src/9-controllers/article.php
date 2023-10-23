@@ -1,6 +1,6 @@
 <?php
-// include '../9-config/debug-dd.php';
-require '../9-models/Database.php';
+// include '../9-config/fonksions.php';
+require '9-models/Database.php';
 // require '../9-core/rooter.php';
 
 // dd($_GET);
@@ -22,6 +22,11 @@ if (! $article) {
     // abort();
 }
 
-include '../9-views/article.view.php';
+view('article',
+    [
+    'article' => $article
+    ]
+    );
+// include '../9-views/article.view.php';
 
 ?>
