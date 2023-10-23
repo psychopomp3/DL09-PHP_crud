@@ -18,8 +18,8 @@ $article = $db->query($queryArticle, [':id' => $id])->find();
 // dd($article);
 
 if (! $article) {
-    exit("article n'existe pas!");
-    // abort();
+    // exit("article n'existe pas!");
+    abort();
 }
 
 view('article',

@@ -17,6 +17,18 @@ h1{
     font-weight: bold;
 }
 
+nav {
+    background-color: bisque;
+    justify-content: flex-end;
+}
+
 nav li{
     justify-content: space-evenly;
+}
+
+.error{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 1rem;
 }

@@ -2,9 +2,7 @@
 
     <h1>Site de Recettes de Cuisine</h1>
 
-    <header>
-        <?php include 'partials/nav.php'; ?>
-    </header>
+    <?php include 'partials/nav.php'; ?>
 
     <main>
         <?php include("$name.view.php"); ?>
