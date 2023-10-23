@@ -2,6 +2,7 @@
 
 $heading = 'Page Index:';
 
-include './9-views/index.view.php';
+view('index', $heading);
+// include './9-views/index.view.php';
 
 ?>

@@ -14,7 +14,11 @@ function dbug($value) {
 function dd($value) {
     dbug($value);
     // die("--la fonction 'die' arrête le script--");
-    die("");
+    die("X_X");
+}
+
+function view(string $name, string | array $model) {
+    return require '9-views/layout.view.php';
 }
 
 ?>

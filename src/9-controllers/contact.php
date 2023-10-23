@@ -1,7 +1,7 @@
 <?php
 
 $heading = 'Informations de Contact:';
+view('contact', $heading);
 
-include './9-views/contact.view.php';
 
 ?>

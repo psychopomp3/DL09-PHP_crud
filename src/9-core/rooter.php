@@ -17,10 +17,9 @@ $uriPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 };
 
 require($routes); */
-
 // require 'routes.php';
 
-$routes = require('./9-config/routes.php');
+
 
 function routeToController($uri, $routes){
     if (array_key_exists($uri, $routes)):
@@ -35,6 +34,8 @@ function abort($code = 404){
     require "9-views/$code.php";
     die();
 }
+
+$routes = require('./9-config/routes.php');
 
 routeToController($uriPath, $routes);
 

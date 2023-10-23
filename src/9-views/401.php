@@ -1,14 +1,7 @@
+<?php include 'partials/header.php'; ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>401</title>
-</head>
-<body>
+<main>
+    <h1>401 - Unauthorized !</h1>
+</main>
 
-    <h1>401 Unauthorized!</h1>
-    
-</body>
-</html>
+<?php include 'partials/footer.php'; ?>

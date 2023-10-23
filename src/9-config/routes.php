@@ -12,7 +12,7 @@ return [
     '/articles' => './9-controllers/articles.php',
     '/article' => './9-controllers/article.php',
     '/contact' => './9-controllers/contact.php',
-    '/conditions' => './9-controllers/conditions.php'
+    '/mentions' => './9-controllers/mentions.php'
 ];
 
 ?>

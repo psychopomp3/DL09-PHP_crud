@@ -1,7 +1,7 @@
 <?php
-// include '../4-fonctions/debug-dd.php';
+// include '../9-config/debug-dd.php';
 require '../9-models/Database.php';
-// require '../rooter.php';
+// require '../9-core/rooter.php';
 
 // dd($_GET);
 
@@ -17,9 +17,9 @@ $article = $db->query($queryArticle, [':id' => $id])->find();
 
 // dd($article);
 
-if (! $article){
+if (! $article) {
     exit("article n'existe pas!");
-    // abort(401);
+    // abort();
 }
 
 include '../9-views/article.view.php';
