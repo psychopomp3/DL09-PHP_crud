@@ -1,7 +1,7 @@
 <?php
 
-//include './4-fonctions/debug-dd.php';
-// require './Database.php';
+//include './9-config/debug-dd.php';
+// require './9-models/Database.php';
 
 // dd($_SERVER);
 
@@ -20,7 +20,7 @@ require($routes); */
 
 // require 'routes.php';
 
-$routes = require('routes.php');
+$routes = require('./9-config/routes.php');
 
 function routeToController($uri, $routes){
     if (array_key_exists($uri, $routes)):

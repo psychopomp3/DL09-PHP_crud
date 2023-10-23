@@ -1,6 +1,6 @@
 <?php
 
-include './4-fonctions/debug-dd.php';
-include './rooter.php';
+include './9-config/debug-dd.php';
+include './9-core/rooter.php';
 
 ?>
