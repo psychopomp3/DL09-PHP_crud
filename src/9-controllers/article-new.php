@@ -7,19 +7,20 @@ $heading = 'Création d\'une nouvelle recette';
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'):
     // dbug($_POST);
-    $titre = filter_var($_POST['titre'],
-    FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $contenu = filter_var($_POST['contenu'],
-    FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $titre = cleanData($_POST['titre']);
+    $contenu = cleanData($_POST['contenu']);
 
-/*     dbug($titre);
-    dbug($contenu); */
+    if ( strlen($titre) === 0 || strlen($contenu) === 0):
+        echo 'champ \'titre\' ou \'contenu\' vide!';
+        exit();
+    else:
+        $db->query('INSERT INTO post(titre, contenu) VALUES (:titre,:contenu)' , [
+            'titre' => $titre,
+            'contenu' => $contenu
+        ]
+        );
+    endif;
 
-    $db->query('INSERT INTO post(titre, contenu) VALUES (:titre,:contenu)' , [
-        'titre' => $titre,
-        'contenu' => $contenu
-    ]
-    );
 
     header('Location: /articles');
     exit();

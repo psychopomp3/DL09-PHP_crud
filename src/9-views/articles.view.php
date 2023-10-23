@@ -1,4 +1,4 @@
-    <?php
+<?php
 
     // dd($model);
 
@@ -7,7 +7,9 @@
     echo '<section>';
         echo "<ul>";
         foreach($model['articles'] as $article):
-            echo '<li><a href="/article?id=' . $article['id'] . '">' . $article['titre'] . '</a></li>';
+            echo '<li>' . 
+            $article['id'] . 
+            ' <a href="/article?id=' . $article['id'] . '">' . $article['titre'] . '</a></li>';
             endforeach;
         echo "</ul>";
         echo '<p><a href="/article-new">Ajouter une nouvelle recette</a></p>';
@@ -15,5 +17,4 @@
 
         // $connexion = null;
 
-    ?>
-
+?>

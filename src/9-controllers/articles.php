@@ -5,7 +5,7 @@ require './9-models/Database.php';
 
 $db = new Database();
 // $articles = $db->query('SELECT * FROM post')->fetchAll(PDO::FETCH_ASSOC);
-$articles = $db->query('SELECT * FROM post')->findAll();
+$articles = $db->query('SELECT * FROM post ORDER BY id DESC')->findAll();
 
 
 $heading = 'Liste de recettes:';
