@@ -3,6 +3,12 @@
     <p>publié le: <?=$model['article']['created_at']?></p>
 
     <p>
+        <a href="/article-update?id=<?=$model['article']['id']?>" class="btn-mod">
+            Modifier cet article
+        </a>
+    </p>
+
+    <p>
         <a href="/article-delete?id=<?=$model['article']['id']?>" 
             onClick="return confirm('êtes-vous certain de vouloir supprimer cet article?')">
             Supprimer cet article
